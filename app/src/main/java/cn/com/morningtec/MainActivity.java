@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import cn.com.morningtec.lodingview.LoadingView;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
