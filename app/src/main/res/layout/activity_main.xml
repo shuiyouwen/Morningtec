@@ -7,14 +7,47 @@
     android:orientation="vertical"
     tools:context="cn.com.morningtec.MainActivity">
 
-    <cn.com.morningtec.lodingview.LoadingView
-        android:id="@+id/loading_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/ll_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <cn.com.morningtec.loadingview.LoadingView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <cn.com.morningtec.loadingview.LoadingView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <cn.com.morningtec.loadingview.LoadingView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <cn.com.morningtec.loadingview.LoadingView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <cn.com.morningtec.loadingview.LoadingView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <cn.com.morningtec.loadingview.LoadingView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <cn.com.morningtec.fontsizeselector.FontSizeSelectorView
+        android:id="@+id/font_size_selector"
+        android:layout_width="match_parent"
+        android:layout_height="120dp" />
 
 </LinearLayout>

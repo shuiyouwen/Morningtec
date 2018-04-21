@@ -1,4 +1,4 @@
-package cn.com.morningtec.lodingview;
+package cn.com.morningtec.loadingview;
 
 import android.content.Context;
 import android.graphics.Canvas;

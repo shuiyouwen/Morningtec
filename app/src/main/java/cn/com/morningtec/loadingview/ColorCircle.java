@@ -1,4 +1,4 @@
-package cn.com.morningtec.lodingview;
+package cn.com.morningtec.loadingview;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
