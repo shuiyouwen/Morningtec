@@ -2,6 +2,8 @@ package cn.com.morningtec;
 
 import org.junit.Test;
 
+import java.util.LinkedList;
+
 import static org.junit.Assert.*;
 
 /**
@@ -12,6 +14,15 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() throws Exception {
+        LinkedList<String> data = new LinkedList<>();
+        data.add("1");
+        data.add("2");
+        data.add("3");
+        data.add("4");
+        data.add("5");
+
+        String pop = data.pop();
+        System.out.println(pop);
         assertEquals(4, 2 + 2);
     }
 }

@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Point;
 import android.graphics.Rect;
+import android.os.Parcel;
 import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
@@ -24,7 +25,7 @@ import static cn.com.morningtec.Utils.dp2px;
 import static cn.com.morningtec.Utils.getTextSize;
 
 /**
- * 字体大小选择view(加阴影)
+ * 字体大小选择view
  * Created by Shui on 2018/4/21.
  */
 
@@ -339,8 +340,66 @@ public class FontSizeSelectorView extends View {
     @Nullable
     @Override
     protected Parcelable onSaveInstanceState() {
-        // TODO: 2018/4/21 需重写
-        return super.onSaveInstanceState();
+        Parcelable parcelable = super.onSaveInstanceState();
+        SavedState ss = new SavedState(parcelable);
+        ss.select = mSelect;
+        return ss;
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Parcelable state) {
+        if (!(state instanceof SavedState)) {
+            super.onRestoreInstanceState(state);
+            return;
+        }
+        SavedState ss = (SavedState) state;
+        super.onRestoreInstanceState(ss.getSuperState());
+        mSelect = ss.select;
+        invalidate();
+    }
+
+
+    static class SavedState extends android.support.v4.view.AbsSavedState {
+        int select;
+
+        SavedState(Parcelable superState) {
+            super(superState);
+        }
+
+        public SavedState(Parcel source, ClassLoader loader) {
+            super(source, loader);
+            select = (Integer) source.readValue(null);
+        }
+
+        @Override
+        public void writeToParcel(Parcel dest, int flags) {
+            super.writeToParcel(dest, flags);
+            dest.writeValue(select);
+        }
+
+        @Override
+        public String toString() {
+            return "SavedState{"
+                    + Integer.toHexString(System.identityHashCode(this))
+                    + " isIconified=" + select + "}";
+        }
+
+        public static final Creator<SavedState> CREATOR = new ClassLoaderCreator<SavedState>() {
+            @Override
+            public SavedState createFromParcel(Parcel in, ClassLoader loader) {
+                return new SavedState(in, loader);
+            }
+
+            @Override
+            public SavedState createFromParcel(Parcel in) {
+                return new SavedState(in, null);
+            }
+
+            @Override
+            public SavedState[] newArray(int size) {
+                return new SavedState[size];
+            }
+        };
     }
 
     @Override

@@ -43,11 +43,24 @@
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="启动loading动画" />
 
     <cn.com.morningtec.fontsizeselector.FontSizeSelectorView
         android:id="@+id/font_size_selector"
         android:layout_width="match_parent"
         android:layout_height="120dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="文字进入动画" />
+
+    <LinearLayout
+        android:id="@+id/ll_container2"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

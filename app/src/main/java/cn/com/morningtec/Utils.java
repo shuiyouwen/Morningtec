@@ -10,7 +10,7 @@ import android.text.TextUtils;
  */
 
 public class Utils {
-    public static int dp2px(Context context, int dp) {
+    public static int dp2px(Context context, float dp) {
         float density = context.getResources().getDisplayMetrics().density;
         return (int) (dp * density + 0.5f);
     }
