@@ -31,14 +31,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final LinearLayout llContainer = findViewById(R.id.ll_container);
+        final LoadingView loadingView = findViewById(R.id.loading_view);
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                for (int i = 0; i < llContainer.getChildCount(); i++) {
-                    LoadingView loadingView = (LoadingView) llContainer.getChildAt(i);
-                    loadingView.start();
-                }
+                loadingView.start();
             }
         });
 

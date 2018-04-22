@@ -7,38 +7,11 @@
     android:orientation="vertical"
     tools:context="cn.com.morningtec.MainActivity">
 
-    <LinearLayout
-        android:id="@+id/ll_container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
-        <cn.com.morningtec.loadingview.LoadingView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <cn.com.morningtec.loadingview.LoadingView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <cn.com.morningtec.loadingview.LoadingView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <cn.com.morningtec.loadingview.LoadingView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <cn.com.morningtec.loadingview.LoadingView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <cn.com.morningtec.loadingview.LoadingView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-
+    <cn.com.morningtec.loadingview.LoadingView
+        android:id="@+id/loading_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/button"
@@ -59,8 +32,8 @@
 
     <LinearLayout
         android:id="@+id/ll_container2"
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
 
 </LinearLayout>
