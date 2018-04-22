@@ -406,7 +406,7 @@ public class FontSizeSelectorView extends View {
     protected void onDraw(Canvas canvas) {
         canvas.drawLine(mPaddingLeftAndRight, mHeight / 2, mWidth - mPaddingLeftAndRight, mHeight / 2, mScalePaint);
 
-        if (mFonts == null) {
+        if (mFonts == null || mScaleX == null) {
             return;
         }
 
